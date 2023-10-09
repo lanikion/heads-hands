@@ -21,7 +21,7 @@ public class GameMaster {
     }
 
     public static String showStats() {
-        String stats = "Статы игрока:\n" +
+        return  "Статы игрока:\n" +
                 "Здоровье " + GameMaster.player.getHealth() + "\n" +
                 "Атака " + GameMaster.player.getAttack() + "\n" +
                 "Защита " + GameMaster.player.getDefence() + "\n\n" +
@@ -29,7 +29,6 @@ public class GameMaster {
                 "Здоровье " + GameMaster.monster.getHealth() + "\n" +
                 "Атака " + GameMaster.monster.getAttack() + "\n" +
                 "Защита " + GameMaster.monster.getDefence();
-        return stats;
     }
 
     private static double randomizer(int min, int max) {
@@ -50,7 +49,6 @@ public class GameMaster {
             if ((int) randomizer(0, 6) > 4) {
                 return true;
             }
-            ;
             count--;
         }
         return false;
